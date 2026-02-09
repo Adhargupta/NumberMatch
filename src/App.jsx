@@ -55,38 +55,55 @@ function App() {
 
   return (
     <div className={background}>
-      <div className="pt-5 pl-5">
+      {/* Animated particles background */}
+      <div className="particles-container">
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className="particle" style={{
+            '--delay': `${i * 0.3}s`,
+            '--duration': `${15 + Math.random() * 10}s`,
+            '--x': `${Math.random() * 100}%`,
+            '--y': `${Math.random() * 100}%`
+          }}></div>
+        ))}
+      </div>
+
+      {/* Logo with subtle animation */}
+      <div className="logo-container">
         <a href="">
-          <img className="mix-blend-color-burn w-35" src={logo} alt="" />
+          <img className="logo-img" src={logo} alt="" />
         </a>
       </div>
 
-      <div className="center mt-[-12px]">
-        <Target target={target} setTarget={setTarget} start={start} />
+      {/* Main game container */}
+      <div className="game-center">
+        <div className="game-card">
+          <Target target={target} setTarget={setTarget} start={start} />
+          
+          <div className="display-wrapper">
+            <Display
+              display={display}
+              setDisplay={setDisplay}
+              clicked={clicked}
+              start={start}
+            />
+          </div>
 
-        <br />
+          <div className="button-wrapper">
+            <Button
+              difference={difference}
+              setBackground={setBackground}
+              clicked={clicked}
+              setClicked={setClicked}
+              setStart={setStart}
+            />
+          </div>
 
-        <Display
-          display={display}
-          setDisplay={setDisplay}
-          clicked={clicked}
-          start={start}
-        />
-
-        <br />
-
-        <Button
-          difference={difference}
-          setBackground={setBackground}
-          clicked={clicked}
-          setClicked={setClicked}
-          setStart={setStart}
-        />
-
-        <br />
-
-        <Message messages={messages} difference={difference} />
+          <Message messages={messages} difference={difference} />
+        </div>
       </div>
+
+      {/* Glow effect that follows the game state */}
+      <div className={`ambient-glow ${clicked && Math.abs(difference) < 0.05 ? 'glow-success' : ''}`}></div>
     </div>
   );
 }
