@@ -17,16 +17,18 @@ function Button({ clicked, setClicked, setStart, setBackground, difference }) {
   }
 
   return (
-    <div className="flex gap-9">
+    <div className="button-group">
       <button
         onClick={()=>stop()}
-        className={`bg-blue-600 ${clicked ? "hidden" : "block"}`}
+        className={`game-button stop-button ${clicked ? "hidden" : "active"}`}
       >
-        Stop
+        <span className="button-text">STOP</span>
+        <span className="button-glow"></span>
       </button>
 
-      <button onClick={restart} className="bg-white text-black">
-        Restart
+      <button onClick={restart} className="game-button restart-button">
+        <span className="button-text">RESTART</span>
+        <span className="button-glow"></span>
       </button>
     </div>
   );
