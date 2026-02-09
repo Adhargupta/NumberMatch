@@ -68,11 +68,11 @@ function App() {
       </div>
 
       {/* Logo with subtle animation */}
-      <div className="logo-container">
+      {/* <div className="logo-container">
         <a href="">
           <img className="logo-img" src={logo} alt="" />
         </a>
-      </div>
+      </div> */}
 
       {/* Main game container */}
       <div className="game-center">
