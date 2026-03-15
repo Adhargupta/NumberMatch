@@ -1,3 +1,5 @@
+import { Heart, Music, Clock, Mic2 } from 'lucide-react';
+
 const HeroPlaylistCard = () => {
   return (
     <div className="hero-playlist-card">
@@ -9,15 +11,15 @@ const HeroPlaylistCard = () => {
         </div>
         <div className="hero-stats">
           <div className="hero-stat">
-            <span>❤️</span>
+            <Heart size={18} />
             <span>2.4k Likes</span>
           </div>
           <div className="hero-stat">
-            <span>🎵</span>
+            <Music size={18} />
             <span>42 Songs</span>
           </div>
           <div className="hero-stat">
-            <span>⏱️</span>
+            <Clock size={18} />
             <span>2h 34m</span>
           </div>
         </div>
@@ -27,10 +29,9 @@ const HeroPlaylistCard = () => {
           background: 'linear-gradient(135deg, #ff6a3d 0%, #e65a2d 100%)',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: '4rem'
+          justifyContent: 'center'
         }}>
-          🎤
+          <Mic2 size={80} strokeWidth={1.5} />
         </div>
       </div>
     </div>
