@@ -1,3 +1,5 @@
+import { Shuffle, SkipBack, Play, SkipForward, Repeat, ListMusic, Disc, Volume2 } from 'lucide-react';
+
 const BottomPlayer = () => {
   return (
     <div className="bottom-player">
@@ -11,11 +13,21 @@ const BottomPlayer = () => {
 
       <div className="player-center">
         <div className="player-main-controls">
-          <button className="player-control-btn">🔀</button>
-          <button className="player-control-btn">⏮️</button>
-          <button className="player-play-btn">▶</button>
-          <button className="player-control-btn">⏭️</button>
-          <button className="player-control-btn">🔁</button>
+          <button className="player-control-btn">
+            <Shuffle size={18} />
+          </button>
+          <button className="player-control-btn">
+            <SkipBack size={18} />
+          </button>
+          <button className="player-play-btn">
+            <Play size={20} fill="currentColor" />
+          </button>
+          <button className="player-control-btn">
+            <SkipForward size={18} />
+          </button>
+          <button className="player-control-btn">
+            <Repeat size={18} />
+          </button>
         </div>
         <div className="progress-bar-container">
           <span className="progress-time">1:23</span>
@@ -27,10 +39,14 @@ const BottomPlayer = () => {
       </div>
 
       <div className="player-right">
-        <button className="player-control-btn">📝</button>
-        <button className="player-control-btn">💿</button>
+        <button className="player-control-btn">
+          <ListMusic size={18} />
+        </button>
+        <button className="player-control-btn">
+          <Disc size={18} />
+        </button>
         <div className="volume-control">
-          <span className="volume-icon">🔊</span>
+          <Volume2 className="volume-icon" size={18} />
           <div className="volume-bar">
             <div className="volume-fill"></div>
           </div>

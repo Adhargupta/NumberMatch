@@ -1,24 +1,26 @@
+import { Home, Disc, Music, Guitar, Clock, Heart, TrendingUp, Radio } from 'lucide-react';
+
 const Sidebar = () => {
   return (
     <div className="dashboard-sidebar">
-      <div className="sidebar-logo">Music Academy</div>
+      <div className="sidebar-logo">Playcloud</div>
 
       <div className="sidebar-section">
         <div className="sidebar-section-title">Browse Music</div>
         <div className="sidebar-item">
-          <span className="sidebar-icon">🏠</span>
+          <Home className="sidebar-icon" size={20} />
           <span>Home</span>
         </div>
         <div className="sidebar-item active">
-          <span className="sidebar-icon">💿</span>
+          <Disc className="sidebar-icon" size={20} />
           <span>Albums</span>
         </div>
         <div className="sidebar-item">
-          <span className="sidebar-icon">🎵</span>
+          <Music className="sidebar-icon" size={20} />
           <span>Tracks</span>
         </div>
         <div className="sidebar-item">
-          <span className="sidebar-icon">🎸</span>
+          <Guitar className="sidebar-icon" size={20} />
           <span>Genres</span>
         </div>
       </div>
@@ -26,19 +28,19 @@ const Sidebar = () => {
       <div className="sidebar-section">
         <div className="sidebar-section-title">Library</div>
         <div className="sidebar-item">
-          <span className="sidebar-icon">⏱️</span>
+          <Clock className="sidebar-icon" size={20} />
           <span>Recently Played</span>
         </div>
         <div className="sidebar-item">
-          <span className="sidebar-icon">❤️</span>
+          <Heart className="sidebar-icon" size={20} />
           <span>Favorite Tracks</span>
         </div>
         <div className="sidebar-item">
-          <span className="sidebar-icon">📊</span>
+          <TrendingUp className="sidebar-icon" size={20} />
           <span>Charts</span>
         </div>
         <div className="sidebar-item">
-          <span className="sidebar-icon">📻</span>
+          <Radio className="sidebar-icon" size={20} />
           <span>Radio</span>
         </div>
       </div>
