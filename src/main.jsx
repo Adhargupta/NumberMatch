@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import MusicAcademy from './components/MusicAcademy/MusicAcademy.jsx'
+import MusicStreamingDashboard from './components/MusicStreamingDashboard/MusicStreamingDashboard.jsx'
 
 createRoot(document.getElementById('root')).render(
-    <MusicAcademy />
+    <MusicStreamingDashboard />
 )
